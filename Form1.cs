@@ -118,7 +118,8 @@ namespace WindowsFormsApp1
 
         private void saveWord()
         {
-            document.SaveAs2(@"C:\Autofill\output.docx");
+            string path = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
+            document.SaveAs2(path + @"\\output.docx");
             document.Close();
             wordApp.Quit();
         }
